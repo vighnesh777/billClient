@@ -19,6 +19,11 @@
     align-items: center;
    
 }
+@media only screen and (max-width:688px) {
+    .homeTable {
+        width: 98%;
+    }
+}
 thead,th{
     background-color: rgb(42, 37, 106);
     color: aliceblue;
