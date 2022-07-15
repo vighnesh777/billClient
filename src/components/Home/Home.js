@@ -42,7 +42,7 @@ const Home=()=>{
         setNewData(null)
     }
     useEffect(()=>{
-        axios.get('http://localhost:8081/').then((res)=>{
+        axios.get('https://billserver.herokuapp.com/').then((res)=>{
             
             res.data.map((bill)=>{
                 bill.billDate=(new Date(bill.billDate).getDate()).toString()+"/"+(new Date(bill.billDate).getMonth()).toString()+"/"+(new Date(bill.billDate).getFullYear()).toString();

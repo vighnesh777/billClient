@@ -9,7 +9,7 @@ const Billpage=()=>{
     const [message,setMessage]=useState("");
     const [billData,setBillData]=useState({});
     useEffect(()=>{
-        axios.get(`http://localhost:8081/bill/${aid}`).then((res)=>{
+        axios.get(`https://billserver.herokuapp.com/bill/${aid}`).then((res)=>{
            
             
             setBillData(res.data);
@@ -21,7 +21,7 @@ const Billpage=()=>{
     },[aid]);
     function handleDelete(e){
         e.preventDefault();
-        axios.delete(`http://localhost:8081/delete/${aid}`).then((res)=>{
+        axios.delete(`https://billserver.herokuapp.com/delete/${aid}`).then((res)=>{
             setMessage(res.data.message);
             window.location.replace("/");
         }

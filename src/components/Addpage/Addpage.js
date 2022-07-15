@@ -16,7 +16,7 @@ const Addpage = () =>{
     function handleSubmit(e)
     {
         e.preventDefault();
-        axios.post(`http://localhost:8081/`,billData).then((res)=>{
+        axios.post(`https://billserver.herokuapp.com/`,billData).then((res)=>{
             if(res.status===200)
             {
                 setMessage(res.data.message);

@@ -7,7 +7,7 @@ const Editpage = () =>{
     const [billData,setBillData]=useState(null);
     const [message,setMessage]=useState("");
     useEffect(()=>{
-        axios.get(`http://localhost:8081/bill/${aid}`).then((res)=>{
+        axios.get(`https://billserver.herokuapp.com/bill/${aid}`).then((res)=>{
             res.data.billDate= res.data.billDate.substring(0,10);
             if(res.data.paidDate)res.data.paidDate=res.data.paidDate.substring(0,10);
             
@@ -20,7 +20,7 @@ const Editpage = () =>{
     function handleSubmit(e)
     {
         e.preventDefault();
-        axios.put(`http://localhost:8081/${billData._id}/edit`,billData).then((res)=>{
+        axios.put(`https://billserver.herokuapp.com/${billData._id}/edit`,billData).then((res)=>{
             if(res.status===200)
             {
                 setMessage(res.data.message);
