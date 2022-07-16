@@ -9,8 +9,12 @@
 }
 @media only screen and (max-width: 688px) {
     .billdetails{
-        width: 100%;
+        width: 97%;
         padding: 8px;
+    }
+    .editbutton, .deletebutton
+    {
+        font-size: 10px;
     }
 }
     
@@ -43,7 +47,7 @@
     color: rgb(191, 67, 67);
 }
 .editbutton,.deletebutton{
-    font-size: 14px;
+    
     letter-spacing: 2px;
     display: flex;
     flex-direction: row;
