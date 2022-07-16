@@ -10,6 +10,7 @@
 @media only screen and (max-width: 688px) {
     .billdetails{
         width: 100%;
+        padding: 8px;
     }
 }
     
