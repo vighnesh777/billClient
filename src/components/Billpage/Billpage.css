@@ -7,6 +7,12 @@
     padding: 5px;
 
 }
+@media only screen and (max-width: 688px) {
+    .billdetails{
+        width: 100%;
+    }
+}
+    
 .row{
     display: flex;
     flex-direction: row;
